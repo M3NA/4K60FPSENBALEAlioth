@@ -1,7 +1,7 @@
-id=template
-name=Template Module
+id=4k60fps-enable-alitoh
+name="4k60fps Enabler For Redmi K40"
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author="Mena Maged"
+description="4k60fps Enabler For Redmi K40/Mi11x/POCO F3 MIUI CAMERA"
 template=3

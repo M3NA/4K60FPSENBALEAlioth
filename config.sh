@@ -50,7 +50,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "    4k/60FPS Enable Poco F3    "
   ui_print "*******************************"
 }
 
@@ -74,6 +74,9 @@ REPLACE="
 # Construct your own list here, it will overwrite the example
 # !DO NOT! remove this if you don't need to replace anything, leave it empty as it is now
 REPLACE="
+/system/vendor/etc/camera/camxoverridesettings.txt
+/system/vendor/etc/camera/eisoverridesettings.txt
+
 "
 
 ##########################################################################################
@@ -85,6 +88,9 @@ REPLACE="
 set_permissions() {
   # Default permissions, don't remove them
   set_perm_recursive  $MODPATH  0  0  0755  0644
+   set_perm_recursive  $MODPATH/system/vendor/lib       0       0       0755            0644
+   set_perm_recursive  $MODPATH/system/vendor/etc       0       0       0755            0644
+   set_perm_recursive  $MODPATH/system/vendor/etc/camera       0       0       0755            0644
 
   # Only some special files require specific permissions
   # The default permissions should be good enough for most cases
